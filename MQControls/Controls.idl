@@ -1,0 +1,131 @@
+namespace MQControls {
+
+    delegate void NormalEventHandler(Object sender);
+
+
+    [bindable]
+    [default_interface]
+    runtimeclass IconButton : Microsoft.UI.Xaml.Controls.Control {
+        IconButton();
+
+        static Microsoft.UI.Xaml.DependencyProperty IconProperty{ get; };
+        String Icon;
+
+        static Microsoft.UI.Xaml.DependencyProperty LabelProperty{ get; };
+        String Label;
+
+        static Microsoft.UI.Xaml.DependencyProperty OrientationProperty{ get; };
+        Microsoft.UI.Xaml.Controls.Orientation Orientation;
+
+        event Microsoft.UI.Xaml.RoutedEventHandler Click;
+    }
+
+    [bindable]
+    [default_interface]
+    runtimeclass GroupBox : Microsoft.UI.Xaml.Controls.ContentControl {
+        GroupBox();
+
+        static Microsoft.UI.Xaml.DependencyProperty TitleProperty{ get; };
+        String Title;
+        
+        static Microsoft.UI.Xaml.DependencyProperty IsIconVisibleProperty{ get; };
+        Microsoft.UI.Xaml.Visibility IsIconVisible;
+
+        static Microsoft.UI.Xaml.DependencyProperty IconProperty{ get; };
+        String Icon;
+    }
+
+    [bindable]
+    [default_interface]
+    runtimeclass MarqueeText : Microsoft.UI.Xaml.Controls.Control {
+        MarqueeText();
+
+        static Microsoft.UI.Xaml.DependencyProperty TextProperty{ get; };
+        String Text;
+
+        static Microsoft.UI.Xaml.DependencyProperty SpeedProperty{ get; };
+        Double Speed;
+
+        static Microsoft.UI.Xaml.DependencyProperty IntervalProperty { get; };
+        Double Interval;
+
+        static Microsoft.UI.Xaml.DependencyProperty IsLoopingProperty { get; };
+        Boolean IsLooping;
+
+        static Microsoft.UI.Xaml.DependencyProperty IsOnProperty { get; };
+        Boolean IsOn;
+
+        static Microsoft.UI.Xaml.DependencyProperty IsHoverPauseProperty { get; };
+        Boolean IsHoverPause;
+
+        event Microsoft.UI.Xaml.RoutedEventHandler Click;
+    }
+
+    [bindable]
+    [default_interface]
+    runtimeclass RegexTextBox : Microsoft.UI.Xaml.Controls.TextBox {
+        RegexTextBox();
+
+        static Microsoft.UI.Xaml.DependencyProperty RegexProperty{ get; };
+        String Regex;
+
+        static Microsoft.UI.Xaml.DependencyProperty MismatchedBrushProperty{ get; };
+        Microsoft.UI.Xaml.Media.Brush MismatchedBrush;
+
+        static Microsoft.UI.Xaml.DependencyProperty IsMatchedProperty{ get; };
+        Boolean IsMatched{ get; };
+    }
+
+    [bindable]
+    [default_interface]
+    runtimeclass SettingsBox : Microsoft.UI.Xaml.Controls.ContentControl {
+        SettingsBox();
+
+        static Microsoft.UI.Xaml.DependencyProperty TitleProperty{ get; };
+        String Title;
+
+        static Microsoft.UI.Xaml.DependencyProperty MessageProperty{ get; };
+        String Message;
+
+        static Microsoft.UI.Xaml.DependencyProperty TypeProperty{ get; };
+        Microsoft.UI.Xaml.Controls.InfoBarSeverity Type;
+    }
+
+    [bindable]
+    [default_interface]
+    runtimeclass SettingsCard : Microsoft.UI.Xaml.Controls.ContentControl {
+        SettingsCard();
+        
+        static Microsoft.UI.Xaml.DependencyProperty TitleProperty{ get; };
+        String Title;
+
+        static Microsoft.UI.Xaml.DependencyProperty MessageProperty{ get; };
+        String Message;
+
+        static Microsoft.UI.Xaml.DependencyProperty IconProperty{ get; };
+        String Icon;
+
+        event Microsoft.UI.Xaml.RoutedEventHandler Click;
+    }
+
+    [bindable]
+    [default_interface]
+    runtimeclass SettingsExpander : Microsoft.UI.Xaml.Controls.ContentControl {
+        SettingsExpander();
+
+        static Microsoft.UI.Xaml.DependencyProperty HeaderProperty{ get; };
+        Object Header;
+
+        static Microsoft.UI.Xaml.DependencyProperty TitleProperty{ get; };
+        String Title;
+
+        static Microsoft.UI.Xaml.DependencyProperty MessageProperty{ get; };
+        String Message;
+
+        static Microsoft.UI.Xaml.DependencyProperty IconProperty{ get; };
+        String Icon;
+
+        static Microsoft.UI.Xaml.DependencyProperty IsExpandedProperty{ get; };
+        Boolean IsExpanded;
+    }
+}

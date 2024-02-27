@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Trigger.cpp" />
+    <ClCompile Include="Controls\MarqueeText.cpp">
+      <Filter>Controls\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\RegexTextBox.cpp">
+      <Filter>Controls\Impl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MQControls.def">
+      <Filter>Others</Filter>
+    </None>
+    <None Include="PropertySheet.props">
+      <Filter>Others</Filter>
+    </None>
+    <None Include="packages.config">
+      <Filter>Others</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Others">
+      <UniqueIdentifier>{d3682c7d-f231-47f7-85be-900b3869ed3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controls">
+      <UniqueIdentifier>{9986e8f3-b275-43bf-908f-b9686d55f0ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{ceb47b3e-0241-477c-81d8-da743ef402b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{18df395a-9575-427e-9e13-17e5dfe10f49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controls\Impl">
+      <UniqueIdentifier>{87f3aa18-a409-46e2-a610-b627dfae5023}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\IconButton.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Output\impl\MQControls.SubPage.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Output\impl\MQControls.Args.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Output\impl\MQControls.Glyph.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Extension.h" />
+    <ClInclude Include="Controls\MarqueeText.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\SettingsBox.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\RegexTextBox.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\SettingsExpander.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Output\MQControls.Main.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\SettingsCard.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Trigger.h" />
+    <ClInclude Include="Controls\GroupBox.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Extension.idl" />
+    <Midl Include="Converter.idl" />
+    <Midl Include="Property.idl" />
+    <Midl Include="Controls.idl" />
+    <Midl Include="Trigger.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis">
+      <Filter>Others</Filter>
+    </Natvis>
+  </ItemGroup>
+</Project>

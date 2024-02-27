@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window x:Class="MQControlsTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="using:MQControlsTest"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mq="using:MQControls" mc:Ignorable="d">
+    <StackPanel x:Name="SP" HorizontalAlignment="Center" Orientation="Vertical">
+        <mq:MarqueeText x:Name="MText" Width="500"
+                        HorizontalAlignment="Left" Background="AliceBlue"
+                        FontSize="18" Interval="50" Speed="50"
+                        Text="我该如何追问，最热烈青春，渡关山重阳，逐陌路的黄昏；茫茫碧草孤城，谁唤我一声，听鸿毛入水，沧海自起飞尘。" />
+        <StackPanel Orientation="Horizontal">
+            <Button Width="80" Height="30" Click="OnClick1" Content="Button1" />
+            <Button Width="80" Height="30" Click="OnClick2" Content="Button2" />
+            <Button Width="80" Height="30" Click="OnClick3" Content="Button3" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Width="80" Height="30" Click="OnClick4" Content="Button4" />
+            <Button Width="80" Height="30" Click="OnClick5" Content="Button5" />
+            <Button Width="80" Height="30" Click="OnClick6" Content="Button6" />
+        </StackPanel>
+        <mq:SettingsBox x:Name="SBox" Title="{x:Bind TB.Text, Mode=OneWay}" Message="我是一条内容" Type="Error">
+            <StackPanel Orientation="Vertical">
+                <TextBox x:Name="TB" Width="600" Text="牢大" />
+                <mq:IconButton x:Name="IB" Padding="10"
+                               mq:Property.ShortCutKey="{mq:ShortCutKey Key=F5}"
+                               Click="OnClick" Foreground="Green"
+                               Icon="{StaticResource Glyph_Wifi}"
+                               Label="{x:Bind Path=TB.Text, Mode=OneWay}"
+                               Visibility="{Binding ElementName=TS, Path=IsOn, Converter={StaticResource ConverterB2VR}, Mode=OneWay}" />
+                <ToggleSwitch x:Name="TS" IsOn="{x:Bind RTB.IsMatched, Mode=OneWay}" />
+            </StackPanel>
+        </mq:SettingsBox>
+        <mq:GroupBox x:Name="GBox" Title="分组框" Width="200" Height="120"
+                     Background="Yellow" BorderBrush="Red"
+                     FontSize="18" Foreground="Blue"
+                     Icon="{StaticResource Glyph_Wifi}"
+                     IsIconVisible="Visible">
+            <Button Content="OKOK好吧" Style="{StaticResource AccentButtonStyle}" />
+        </mq:GroupBox>
+        <mq:RegexTextBox x:Name="RTB" Regex="\d+\s+\d+\s+\d+\s+\d+" />
+        <mq:SettingsExpander x:Name="SSE" Title="Settings Expander with a custom ItemTemplate" Icon="{StaticResource Glyph_Share}" Message="SettingsExpander can use DataTemplate 123456">
+            <mq:SettingsExpander.Header>
+                <Button Content="Header" />
+            </mq:SettingsExpander.Header>
+            <StackPanel>
+                <Button Content="123" />
+                <Button Content="456" />
+                <Button Content="789" />
+            </StackPanel>
+        </mq:SettingsExpander>
+        <mq:SettingsCard x:Name="SSC" Title="测试" Icon="{StaticResource Glyph_BandBattery0}" Message="内容说明">
+            <Button Content="123" Style="{StaticResource AccentButtonStyle}" />
+        </mq:SettingsCard>
+    </StackPanel>
+</Window>

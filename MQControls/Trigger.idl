@@ -1,0 +1,20 @@
+namespace MQControls {
+    [bindable]
+    [default_interface]
+    runtimeclass ValueStateTrigger : Microsoft.UI.Xaml.StateTriggerBase {
+        ValueStateTrigger();
+
+        static Microsoft.UI.Xaml.DependencyProperty StringValue1Property{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty StringValue2Property{ get; };
+        String StringValue1;
+        String StringValue2;
+
+        static Microsoft.UI.Xaml.DependencyProperty BoolValue1Property{ get; };
+        Boolean BoolValue1;
+        Boolean BoolValue2;
+
+        static Microsoft.UI.Xaml.DependencyProperty OrientationValue1Property{ get; };
+        Microsoft.UI.Xaml.Controls.Orientation OrientationValue1;
+        Microsoft.UI.Xaml.Controls.Orientation OrientationValue2;
+    }
+}

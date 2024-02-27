@@ -1,0 +1,21 @@
+namespace MQControls {
+    [bindable]
+    [default_interface]
+    runtimeclass FontIconExtension : Microsoft.UI.Xaml.Markup.MarkupExtension {
+        FontIconExtension();
+
+        Double FontSize;
+        String Glyph;
+        Windows.UI.Text.FontWeight FontWeight;
+        Microsoft.UI.Xaml.Media.Brush Foreground;
+    }
+
+    [bindable]
+    [default_interface]
+    runtimeclass ShortCutKeyExtension : Microsoft.UI.Xaml.Markup.MarkupExtension {
+        ShortCutKeyExtension();
+
+        Windows.System.VirtualKey Key;
+        Windows.System.VirtualKeyModifiers Modifiers;
+    }
+}
